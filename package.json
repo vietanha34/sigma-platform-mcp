@@ -1,0 +1,38 @@
+{
+  "name": "sigma-streaming-platform-mcp",
+  "version": "1.0.0",
+  "description": "Sigma Platform MCP server for DevOps operators",
+  "main": "./dist/main.js",
+  "bin": {
+    "sigma-streaming-platform-mcp": "./dist/main.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsgo && node scripts/prepare-bin.cjs",
+    "docker:build": "docker build -t sigma-streaming-platform-mcp .",
+    "docker:run": "docker run -i --rm -e SIGMA_TOKEN -e SIGMA_BASE_URL sigma-streaming-platform-mcp",
+    "prepack": "npm run build",
+    "start": "node dist/main.js",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "axios": "^1.7.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@typescript/native-preview": "latest",
+    "@types/node": "^22.0.0"
+  }
+}

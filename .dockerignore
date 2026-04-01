@@ -1,0 +1,10 @@
+.claude
+.git
+.omx
+.vscode
+dist
+docs
+node_modules
+test
+*.log
+*.tgz
