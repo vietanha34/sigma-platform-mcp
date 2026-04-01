@@ -1,6 +1,6 @@
 {
   "name": "sigma-streaming-platform-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sigma Platform MCP server for DevOps operators",
   "main": "./dist/main.js",
   "bin": {
