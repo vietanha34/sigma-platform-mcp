@@ -31,6 +31,8 @@ test('.dockerignore excludes build outputs and local workspace state', () => {
 test('README documents Docker build, Docker run, and Docker MCP client config', () => {
   const readme = readFile('README.md');
 
+  assert.match(readme, /npx -y @sigmaott\/cloud-mcp/);
+  assert.match(readme, /"args": \["-y", "@sigmaott\/cloud-mcp"\]/);
   assert.match(readme, /docker build -t sigma-streaming-platform-mcp \./);
   assert.match(readme, /docker run -i --rm/);
   assert.match(readme, /"command": "docker"/);

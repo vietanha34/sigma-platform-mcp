@@ -1,5 +1,5 @@
 {
-  "name": "sigma-streaming-platform-mcp",
+  "name": "@sigmaott/cloud-mcp",
   "version": "1.0.1",
   "description": "Sigma Platform MCP server for DevOps operators",
   "main": "./dist/main.js",
@@ -31,8 +31,9 @@
     "zod": "^3.23.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.0.0",
+    "@biomejs/biome": "^2.4.10",
     "@typescript/native-preview": "latest",
-    "@types/node": "^22.0.0"
+    "@types/node": "^22.0.0",
+    "typescript": "^5.1.3"
   }
 }

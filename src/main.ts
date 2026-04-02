@@ -13,7 +13,7 @@ async function main() {
   const config = loadConfig();
   const client = new SigmaHttpClient(config.baseUrl, config.token);
 
-  const server = new McpServer({ name: 'sigma-streaming-platform-mcp', version: '1.0.0' });
+  const server = new McpServer({ name: 'sigma-streaming-platform-mcp', version: '1.0.1' });
 
   registerTools(server, {
     authService: new SigmaAuthService(client),

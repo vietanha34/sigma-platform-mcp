@@ -28,12 +28,12 @@ Choose Docker when your MCP client can invoke Docker directly and you want isola
 
 ## Run Via npx
 
-After publishing to npm, you can run the MCP server directly with:
+The package currently published on npm is `@sigmaott/cloud-mcp`. Run the MCP server directly with:
 
 ```bash
 SIGMA_TOKEN=pat_your_token_here \
 SIGMA_BASE_URL=https://api.sigma.example.com \
-npx -y sigma-streaming-platform-mcp
+npx -y @sigmaott/cloud-mcp
 ```
 
 This works because the package exposes a CLI binary pointing to `dist/main.js`.
@@ -87,7 +87,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
   "mcpServers": {
     "sigma-streaming-platform": {
       "command": "npx",
-      "args": ["-y", "sigma-streaming-platform-mcp"],
+      "args": ["-y", "@sigmaott/cloud-mcp"],
       "env": {
         "SIGMA_TOKEN": "pat_your_token_here",
         "SIGMA_BASE_URL": "https://api.sigma.example.com"
@@ -136,7 +136,7 @@ Add to `~/.kiro/settings/mcp.json`:
   "mcpServers": {
     "sigma-streaming-platform": {
       "command": "npx",
-      "args": ["-y", "sigma-streaming-platform-mcp"],
+      "args": ["-y", "@sigmaott/cloud-mcp"],
       "env": {
         "SIGMA_TOKEN": "pat_your_token_here",
         "SIGMA_BASE_URL": "https://api.sigma.example.com"
@@ -225,7 +225,7 @@ AI → restart_channel(appId: "app_abc", channelId: "ch_1")
 
 ## Publish To npm
 
-1. Ensure the package name `sigma-streaming-platform-mcp` is available on npm.
+1. Use the published package name `@sigmaott/cloud-mcp`.
 2. Run `npm login`.
 3. Bump the version with `npm version patch` (or `minor` / `major`).
 4. Publish with `npm publish`.
