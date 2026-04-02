@@ -22,7 +22,7 @@ npm run lint:fix # auto-fix
 This MCP supports two deployment paths without changing the server architecture:
 
 1. `npx` for direct local execution
-2. Docker for a containerized stdio process launched via `docker run -i --rm ...`
+2. Docker for a containerized stdio process launched via `docker run -i --rm sigmastreaming/cloud-mcp`
 
 Choose Docker when your MCP client can invoke Docker directly and you want isolated runtime dependencies.
 
@@ -43,7 +43,7 @@ This works because the package exposes a CLI binary pointing to `dist/main.js`.
 Build the image from this repository:
 
 ```bash
-docker build -t sigma-streaming-platform-mcp .
+docker build -t sigmastreaming/cloud-mcp .
 ```
 
 Or use the bundled script:
@@ -58,7 +58,7 @@ Run the MCP server as a stdio container:
 docker run -i --rm \
   -e SIGMA_TOKEN=pat_your_token_here \
   -e SIGMA_BASE_URL=https://api.sigma.example.com \
-  sigma-streaming-platform-mcp:latest
+  sigmastreaming/cloud-mcp:latest
 ```
 
 Or, if you prefer to pass environment variables from your current shell:
@@ -114,7 +114,7 @@ If Claude Desktop on your machine can invoke Docker directly, use:
         "SIGMA_TOKEN",
         "-e",
         "SIGMA_BASE_URL",
-        "sigma-streaming-platform-mcp:latest"
+        "sigmastreaming/cloud-mcp:latest"
       ],
       "env": {
         "SIGMA_TOKEN": "pat_your_token_here",
@@ -161,7 +161,7 @@ Add to `~/.kiro/settings/mcp.json`:
         "SIGMA_TOKEN",
         "-e",
         "SIGMA_BASE_URL",
-        "sigma-streaming-platform-mcp:latest"
+        "sigmastreaming/cloud-mcp:latest"
       ],
       "env": {
         "SIGMA_TOKEN": "pat_your_token_here",

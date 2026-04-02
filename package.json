@@ -18,8 +18,8 @@
   },
   "scripts": {
     "build": "tsgo && node scripts/prepare-bin.cjs",
-    "docker:build": "docker build -t sigma-streaming-platform-mcp .",
-    "docker:run": "docker run -i --rm -e SIGMA_TOKEN -e SIGMA_BASE_URL sigma-streaming-platform-mcp",
+    "docker:build": "docker build -t sigmastreaming/cloud-mcp .",
+    "docker:run": "docker run -i --rm -e SIGMA_TOKEN -e SIGMA_BASE_URL sigmastreaming/cloud-mcp",
     "prepack": "npm run build",
     "start": "node dist/main.js",
     "lint": "biome check .",
